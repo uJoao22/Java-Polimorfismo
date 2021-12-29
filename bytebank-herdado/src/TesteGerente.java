@@ -10,10 +10,10 @@ public class TesteGerente {
 		System.out.println(g1.getCpf());
 		System.out.println("O salário do gerente é de: "+g1.getSalario());
 
-		g1.setSenha(2222);
-		boolean autenticou = g1.autentica(2222);
+//		g1.setSenha(2222);
+//		boolean autenticou = g1.autentica(2222);
 		
-		System.out.println(autenticou);
+//		System.out.println(autenticou);
 		
 		System.out.println("Salário do gerente após a bonificação: "+g1.getBonificacao());
 	}
