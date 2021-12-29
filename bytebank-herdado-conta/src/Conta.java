@@ -1,5 +1,6 @@
-public class Conta {
-	private double saldo;
+public abstract class Conta {
+	
+	protected double saldo;
 	private int agencia;
 	private int numero;
 	
@@ -15,9 +16,7 @@ public class Conta {
 		this.numero = numero;
 	}
 	
-	public void deposita(double valor){
-		this.saldo += valor;
-	}
+	public abstract void deposita(double valor);
 	
 	public boolean saca(double valor) {
 		if(valor <= this.saldo) {
