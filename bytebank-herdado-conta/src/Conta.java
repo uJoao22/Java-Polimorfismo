@@ -28,8 +28,7 @@ public class Conta {
 	}
 	
 	public boolean transfere(double valor, Conta destino) {
-		boolean res = saca(valor);
-		if(res) {
+		if(this.saca(valor)) {
 			destino.deposita(valor);
 			return true;
 		}
