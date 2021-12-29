@@ -1,19 +1,23 @@
 //Implementando a interface Autenticavel
 public class Cliente implements Autenticavel {
 
-	private int senha;
+	private AutenticacaoUtil autenticador;
+	
+	//Instanciando a AutentificacaoUtil
+	public Cliente() {
+		this.autenticador = new AutenticacaoUtil();
+	} 
 	
 	@Override
 	public void setSenha(int senha) {
-		this.senha = senha;
+		//Chamando a instancia de AUtenticacaoUtil e invocando o método setSenha envindo a senha por parametro 
+		this.autenticador.setSenha(senha);
 	}
 
 	@Override
 	public boolean autentica(int senha) {
-		if(this.senha == senha)
-			return true;
-		else
-			return false;
+		//Chamando a instancia de AUtenticacaoUtil e invocando o método autentica enviando a senha por parametro 
+		return this.autenticador.autentica(senha);
 	}
 
 }
